@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="feedback">
+		<meta name="description" content="在线留言板咩~">
+		<link rel="icon" href="https://exam.abllo.cn/static/picture/icon_full.png.jpeg" type="image/x-icon">
+		<link rel="shortcut icon" href="https://exam.abllo.cn/static/picture/icon_full.png.jpeg" type="image/x-icon">
+		<link href="static/css/ui.css" rel="stylesheet" type="text/css">
+		<link href="static/css/main.css" rel="stylesheet" type="text/css">
+		<script src="static/js/nangsoft.js"></script>
+		<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<script src="static/js/sweetalert.min.js"></script>
+		<title>在线留言板咩~</title>
+	</head>
+	<body>
+		<div class="ns-headbox">
+			<picture>
+				<source srcset="https://exam.abllo.cn/static/picture/icon_full.png.jpeg" media="(prefers-color-scheme: dark)"
+					id="nightlogo"><img src="https://exam.abllo.cn/static/picture/icon_full.png.jpeg" alt="NangSoft" id="logo">
+			</picture>
+			<div
+				style="display:inline-block;position: absolute;right:20px;top:50%;transform:translateY(-50%);text-align:center;opacity:50%;font-size:14.5px;color:grey;">
+				<script type="text/javascript">
+					document.write(returnCitySN["cip"] + '<br>' + returnCitySN["cname"])
+				</script>
+			</div>
+		</div>
+		<div class="ns-feedback-mainbox">
+			<div class="ns-feedback-title">给我留言咩</div>
+			<form id="ns-feedback" action="https://formspree.io/f/mknegbar" method="POST">
+				<input class="ns-feedback-email" type="text" name="message" required="required" placeholder="您的名字">
+				<textarea class="ns-feedback-input" type="text" name="message" placeholder="反馈内容（请注意文明用语，严禁填写不恰当内容！必要时请留下联系方式~）"
+					required=""></textarea>
+				<button class="ns-feedback-pull" id="pull-button">发过去咩</button>
+			</form>
+		</div>
+		<script src="static/js/main.js"></script>
+		<script>
+			(function() {
+				var js =
+					"window['__CF$cv$params']={r:'740226f3ff1d7c3b',m:'ddr6BJHwasBotAp.Mh79yvMbW1NZ2J2NWO6Mb817szg-1661407698-0-AUyU7ZETMiqs+4h/IylgS16nBgkFgHSpcHlU1VtWXuR9bN66lpzwYHmvbsJ+v7GrGFK7fVatXGhbWwAEWQE50szv9o267kpNYPFF5b/P6t1B4K9XbJ7PBkf3RCwKCwFs4g==',s:[0xb3b67b7cea,0x123121824a],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";
+				var _0xh = document.createElement('iframe');
+				_0xh.height = 1;
+				_0xh.width = 1;
+				_0xh.style.position = 'absolute';
+				_0xh.style.top = 0;
+				_0xh.style.left = 0;
+				_0xh.style.border = 'none';
+				_0xh.style.visibility = 'hidden';
+				document.body.appendChild(_0xh);
+
+				function handler() {
+					var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+					if (_0xi) {
+						var _0xj = _0xi.createElement('script');
+						_0xj.nonce = '';
+						_0xj.innerHTML = js;
+						_0xi.getElementsByTagName('head')[0].appendChild(_0xj);
+					}
+				}
+				if (document.readyState !== 'loading') {
+					handler();
+				} else if (window.addEventListener) {
+					document.addEventListener('DOMContentLoaded', handler);
+				} else {
+					var prev = document.onreadystatechange || function() {};
+					document.onreadystatechange = function(e) {
+						prev(e);
+						if (document.readyState !== 'loading') {
+							document.onreadystatechange = prev;
+							handler();
+						}
+					};
+				}
+			})();
+		</script>
+	</body>
+</html>
